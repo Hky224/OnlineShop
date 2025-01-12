@@ -18,7 +18,7 @@ const AK = "oRjVWSGZbehcnxpXsa3LLOCs";
 const SK = "3mGzUCGW8vONPxMXmqoaumVFHna0EfdS";
 
 app.use(cors({
-    origin: 'https://online-shop-front-end-eta.vercel.app',
+    origin: ["https://online-shop-front-end-eta.vercel.app"],
     credentials: true
 }));
 app.use(express.json());
