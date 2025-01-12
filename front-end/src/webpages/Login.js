@@ -13,7 +13,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const hashedPassword = CryptoJS.SHA256(password).toString(CryptoJS.enc.Hex);
-    const response = await axios.post('https://online-shopapi.vercel.app/login', {
+    const response = await axios.post('https://onlineshop-backend-bspd.onrender.com/login', {
       email,
       password: hashedPassword
     }, { withCredentials: true });

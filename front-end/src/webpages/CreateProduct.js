@@ -9,6 +9,7 @@ function CreateProduct() {
   const [description, setDescription] = useState('');
   const [password, setPassword] = useState('');
 
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -24,7 +25,7 @@ function CreateProduct() {
       alert('Incorrect password!');
       return;
     }
-    const response = await axios.post('https://online-shopapi.vercel.app/products', formData, {
+    const response = await axios.post('https://onlineshop-backend-bspd.onrender.com/products', formData, {
       headers: { 'Content-Type': 'multipart/form-data' },
     });
     console.log('Product created:', response.data);

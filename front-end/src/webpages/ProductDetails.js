@@ -12,7 +12,7 @@ function ProductDetail() {
 
     useEffect(() => {
         const fetchProduct = async () => {
-            const response = await axios.get(`https://online-shopapi.vercel.app/products/${productId}`);
+            const response = await axios.get(`https://onlineshop-backend-bspd.onrender.com/products/${productId}`);
             setProduct(response.data);
         };
         fetchProduct();
@@ -39,7 +39,7 @@ function ProductDetail() {
             <div className="container mt-5">
                 <div className="row">
                     <div className="col-md-6">
-                        <img src={`https://online-shopapi.vercel.app/uploads/${product.image}`} alt={product.name} className="img-fluid" />
+                        <img src={`https://onlineshop-backend-bspd.onrender.com/uploads/${product.image}`} alt={product.name} className="img-fluid" />
                     </div>
                     <div className="col-md-6">
                         <h2 className="card-title">{product.name}</h2>

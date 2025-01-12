@@ -18,7 +18,8 @@ function Contact() {
         const finalMessage = productInfo + input;
         const newUserMessage = { role: 'user', content: input };
         setMessages([...messages, newUserMessage]);
-        const response = await axios.post('https://online-shopapi.vercel.app/chat', { message: finalMessage });
+        
+        const response = await axios.post('https://onlineshop-backend-bspd.onrender.com/chat', { message: finalMessage });
         const newAIResponse = { role: 'ai', content: response.data.result };
         setMessages(messages => [...messages, newAIResponse]);
         setInput('');
