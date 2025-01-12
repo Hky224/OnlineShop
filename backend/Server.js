@@ -12,7 +12,7 @@ const axios = require('axios');
 const nodemailer = require('nodemailer');
 
 const app = express();
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
 const AK = "oRjVWSGZbehcnxpXsa3LLOCs";
 const SK = "3mGzUCGW8vONPxMXmqoaumVFHna0EfdS";
