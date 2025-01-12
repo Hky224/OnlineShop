@@ -18,7 +18,7 @@ const AK = "oRjVWSGZbehcnxpXsa3LLOCs";
 const SK = "3mGzUCGW8vONPxMXmqoaumVFHna0EfdS";
 
 app.use(cors({
-  origin: 'https://online-shop-front-end-eta.vercel.app', // Replace with your frontend's URL
+  origin: 'https://onlineshop-front-end.onrender.com', // Replace with your frontend's URL
   credentials: true // If you need to send cookies or HTTP authentication
 }));
 app.use(express.json());
@@ -40,7 +40,10 @@ mongoose.connect('mongodb+srv://soube1:009009@cluster0.btd76.mongodb.net/db?retr
   .then(() => console.log('Connected to MongoDB'))
   .catch(err => console.log(err));
 
-app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+  app.use('/uploads', (req, res, next) => {
+    console.log(`Request for: ${req.url}`);
+    next();
+  }, express.static(path.join(__dirname, 'uploads')));
 
 app.post('/register', async (req, res) => {
   try {
