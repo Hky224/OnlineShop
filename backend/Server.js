@@ -18,7 +18,7 @@ const AK = "oRjVWSGZbehcnxpXsa3LLOCs";
 const SK = "3mGzUCGW8vONPxMXmqoaumVFHna0EfdS";
 
 app.use(cors({
-  origin: 'https://online-shop-front-end-eta.vercel.app', // Replace with your frontend's URL
+  origin: 'https://onlineshop-front-end.onrender.com', // Replace with your frontend's URL
   credentials: true // If you need to send cookies or HTTP authentication
 }));
 app.use(express.json());
