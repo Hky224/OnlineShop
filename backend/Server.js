@@ -93,6 +93,15 @@ app.get('/products', async (req, res) => {
     }
   });
 
+  app.get('/', async (req, res) => {
+    try {
+      
+      res.json("Hello");
+    } catch (error) {
+      res.status(500).send(error.message);
+    }
+  });
+
 app.get('/products/discount', async (req, res) => {
     try {
         const discountProducts = await Product.find({ type: 'discount' });
