@@ -18,7 +18,7 @@ const AK = "oRjVWSGZbehcnxpXsa3LLOCs";
 const SK = "3mGzUCGW8vONPxMXmqoaumVFHna0EfdS";
 
 app.use(cors({
-  origin: 'https://online-shop-front-ou24nrvqz-erics-projects-22cdfec4.vercel.app', // Replace with your frontend's URL
+  origin: 'https://online-shop-front-end-eta.vercel.app', // Replace with your frontend's URL
   credentials: true // If you need to send cookies or HTTP authentication
 }));
 app.use(express.json());
@@ -174,6 +174,6 @@ app.post('/purchase', async (req, res) => {
 
 
 
-app.listen(PORT, '0.0.0.0', () => {
+app.listen(PORT,  () => {
   console.log(`Server is running on port ${PORT}`);
 });
