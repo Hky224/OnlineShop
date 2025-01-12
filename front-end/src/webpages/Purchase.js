@@ -28,7 +28,7 @@ function Purchase() {
             userEmail: localStorage.getItem('userEmail'),
             paymentMethod: paymentMethod
         };
-        const response = await axios.post('http://localhost:3001/purchase', purchaseInfo);
+        const response = await axios.post('https://online-shopapi.vercel.app/purchase', purchaseInfo);
         if (response.data.redirect) {
             alert("Purchase Completed");
             navigate('/');

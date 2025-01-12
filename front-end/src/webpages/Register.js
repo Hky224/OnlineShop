@@ -13,7 +13,7 @@ const Register = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         const hashedPassword = CryptoJS.SHA256(password).toString(CryptoJS.enc.Hex);
-        const response = await fetch('http://localhost:3001/register', {
+        const response = await fetch('https://online-shopapi.vercel.app/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

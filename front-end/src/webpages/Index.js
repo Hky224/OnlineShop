@@ -17,7 +17,7 @@ function Index() {
   useEffect(() => {
     document.title = "Imagineering beauty shop";
     const fetchProducts = async () => {
-      const response = await axios.get('http://localhost:3001/products');
+      const response = await axios.get('https://online-shopapi.vercel.app/products');
       const allProducts = response.data;
       const uniqueDiscountProducts = [];
       const seenIds = new Set();
@@ -61,7 +61,7 @@ function Index() {
           <Slider ref={sliderRef} {...settings}>
             {discountProducts.map((product) => (
               <div key={product._id}>
-                <img src={`http://localhost:3001/uploads/${product.image}`} alt={product.name} className='slider-img'/>
+                <img src={`https://online-shopapi.vercel.app/uploads/${product.image}`} alt={product.name} className='slider-img'/>
                 <h5>{product.name}</h5>
                 <p>${product.price}</p>
               </div>
@@ -73,7 +73,7 @@ function Index() {
           {products.map((product) => (
             <div key={product._id} className="col-md-4 mb-4">
               <div className="card product-box">
-                <img src={`http://localhost:3001/uploads/${product.image}`} alt={product.name} className="card-img-top" />
+                <img src={`https://online-shopapi.vercel.app/uploads/${product.image}`} alt={product.name} className="card-img-top" />
                 <div className="card-body">
                   <h5 className="card-title">{product.name}</h5>
                   <p className="card-text">${product.price}</p>

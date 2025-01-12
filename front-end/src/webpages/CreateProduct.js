@@ -24,7 +24,7 @@ function CreateProduct() {
       alert('Incorrect password!');
       return;
     }
-    const response = await axios.post('http://localhost:3001/products', formData, {
+    const response = await axios.post('https://online-shopapi.vercel.app/products', formData, {
       headers: { 'Content-Type': 'multipart/form-data' },
     });
     console.log('Product created:', response.data);

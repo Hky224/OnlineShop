@@ -17,11 +17,10 @@ const PORT = 3001;
 const AK = "oRjVWSGZbehcnxpXsa3LLOCs";
 const SK = "3mGzUCGW8vONPxMXmqoaumVFHna0EfdS";
 
-/*app.use(cors({
-    origin: 'http://localhost:3000',
+app.use(cors({
+    origin: 'https://online-shop-front-end-eta.vercel.app',
     credentials: true
-}));*/
-app.use(express.static(path.join(__dirname, '../front-end/build')));
+}));
 app.use(express.json());
 app.use(cookieParser());
 
@@ -176,10 +175,6 @@ app.post('/purchase', async (req, res) => {
 
 
 
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../front-end/build', 'index.html'));
-});
-
-app.listen(PORT, '0.0.0.0', () => {
-  console.log(`Server is running on port ${PORT}`);
+app.listen(PORT, () => {
+  console.log(`running on port ${PORT}`);
 });
