@@ -24,7 +24,7 @@ const Navbar = () => {
     navigate("/");
   };
   const handleAddProduct = () => {
-    navigate("/create-product");
+    window.open("/create-product", "_blank");
   };
 
   return (
